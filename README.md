@@ -63,7 +63,6 @@ Read about the changes to this project in [CHANGELOG.md](CHANGELOG.md). The form
 
 ## Contact
 
-- **chat** – You can chat about this project at []()
 - **issues** – Please open issues in the [issues queue](https://github.com/sethvincent/markdown-reader/issues)
 - **twitter** – Have a question? [@sethdvincent](https://twitter.com/sethdvincent)
 - **email** – Need in-depth support via paid contract? Send an email to sethvincent@gmail.com
