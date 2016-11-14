@@ -24,6 +24,23 @@ markdown-reader is a library for reading a collection of markdown files, and mak
 - frontmatter yaml is parsed into an object
 - markdown is transformed into html
 
+An example item in the stream:
+
+```js
+{
+  basename: 'index.js',
+  relname: 'tests/index.js',
+  root: '/Users/sdv/workspace/sethvincent/folder-reader',
+  filepath: '/Users/sdv/workspace/sethvincent/folder-reader/tests/index.js',
+  stat: [fs.Stat Object],
+  type: 'file', // or 'directory',
+  file: '', // the original contents of the file
+  markdown: '', // the markdown content without frontmatter
+  data: {}, // an object containing any values from frontmatter
+  html: '' // the markdown transformed into html
+}
+```
+
 ## Install
 
 ```sh
