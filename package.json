@@ -1,0 +1,43 @@
+{
+  "name": "markdown-reader",
+  "version": "0.0.0",
+  "description": "Create a stream of markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --unused --no-dev && ncu",
+    "docs:api": "documentation build index.js -f md -o docs/API.md",
+    "docs:build": "npm run docs:api",
+    "lint": "standard",
+    "test:no-lint": "node tests/*.js | tap-spec",
+    "test": "npm run lint && npm run test:no-lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethvincent/markdown-reader.git"
+  },
+  "keywords": [
+    "markdown",
+    "md",
+    "static",
+    "sites"
+  ],
+  "author": "sethvincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethvincent/markdown-reader/issues"
+  },
+  "homepage": "https://github.com/sethvincent/markdown-reader#readme",
+  "dependencies": {
+    "folder-reader": "^1.0.1",
+    "gray-matter": "^2.1.0",
+    "marked": "^0.3.6",
+    "rewrite-markdown-urls": "^1.0.0"
+  },
+  "devDependencies": {
+    "documentation": "^4.0.0-beta13",
+    "obj-keypath": "^1.0.0",
+    "standard": "^8.5.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
+  }
+}
