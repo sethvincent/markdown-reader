@@ -8,6 +8,7 @@ Create a stream of markdown files from a set of directories.
 * @name markdownReader
 * @param {Array} dirs – The directories to read. Optionally can pass string path of one directory.
 * @param {Object} options
+* @param {Object} options.fs – alternate fs implementation, optional
 * @param {String} options.encoding – encoding of files, default: utf8
 * @param {String} options.filter – glob pattern for filtering files, default: '**\/*.md'
 * @param {String} options.filter – array of glob patterns for filtering files, example: [`*.md`, `*.css`]
@@ -39,5 +40,9 @@ module.exports = function markdownReader (dirs, options) {
     })
   }
 
-  return reader(dirs, { map: map, filter: filter })
+  return reader(dirs, {
+    map: map,
+    filter: filter,
+    fs: options.fs
+  })
 }

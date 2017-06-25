@@ -57,6 +57,19 @@ var dir = path.join(__dirname, 'files')
 reader(dir).on('data', console.log)
 ```
 
+### Using alternate fs implementations
+
+You can use this module with alternate fs implementations like [hyperdrive](https://npmjs.com/hyperdrive) by passing the alternate `fs` as an option:
+
+```js
+var reader = require('markdown-reader')
+var hyperdrive = require('hyperdrive')
+
+var drive = hyperdrive('./drive')
+
+reader('/some/dir', { fs: drive })
+```
+
 ## Documentation
 - [Getting started](docs/getting-started.md)
 - [API](docs/api.md)

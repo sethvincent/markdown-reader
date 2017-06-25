@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --unused --no-dev && ncu",
-    "docs:api": "documentation build index.js -f md -o docs/API.md",
+    "docs:api": "documentation build index.js -f md -o docs/API.md --markdown-toc=false",
     "docs:build": "npm run docs:api",
     "lint": "standard",
     "test:no-lint": "node tests/*.js | tap-spec",
@@ -28,16 +28,16 @@
   },
   "homepage": "https://github.com/sethvincent/markdown-reader#readme",
   "dependencies": {
-    "folder-reader": "^1.0.1",
-    "gray-matter": "^2.1.0",
+    "folder-reader": "^1.1.0",
+    "gray-matter": "^2.1.1",
     "marked": "^0.3.6",
     "rewrite-markdown-urls": "^1.0.0"
   },
   "devDependencies": {
-    "documentation": "^4.0.0-beta13",
-    "obj-keypath": "^1.0.0",
-    "standard": "^8.5.0",
+    "documentation": "^4.0.0-rc.1",
+    "obj-keypath": "^1.1.0",
+    "standard": "^10.0.2",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.2"
+    "tape": "^4.6.3"
   }
 }

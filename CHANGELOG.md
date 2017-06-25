@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 * ???
 
+## v1.1.0 - 2017-06-25
+
+### Added
+
+* pass alternate `fs` in options
+
 ## v1.0.0 - 2016-11-13
 
 ### Added
